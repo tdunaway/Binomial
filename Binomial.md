@@ -9,25 +9,25 @@ of 100000.  I'm taking 1000 samples from this population of size 20.
 
 ```r
 x <- rbinom(100000,1,0.75)
-y <- NULL
-for (i in 1 : 1000) y <- c(y, mean(sample(x,20)))
+xbar <- NULL
+for (i in 1 : 1000) xbar <- c(xbar, mean(sample(x,20)))
 mean(x)
 ```
 
 ```
-## [1] 0.74802
+## [1] 0.75186
 ```
 
 ```r
-mean(y)
+mean(xbar)
 ```
 
 ```
-## [1] 0.74685
+## [1] 0.7524
 ```
 
 ```r
-quantile(y, c(0.025, 0.975))
+quantile(xbar, c(0.025, 0.975))
 ```
 
 ```

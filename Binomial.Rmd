@@ -13,14 +13,14 @@ Here I'm simulating a sample of size 20 from a very large population
 of 100000.  I'm taking 1000 samples from this population of size 20.
 ```{r}
 x <- rbinom(100000,1,0.75)
-y <- NULL
-for (i in 1 : 1000) y <- c(y, mean(sample(x,20)))
+xbar <- NULL
+for (i in 1 : 1000) xbar <- c(xbar, mean(sample(x,20)))
 mean(x)
-mean(y)
-quantile(y, c(0.025, 0.975))
+mean(xbar)
+quantile(xbar, c(0.025, 0.975))
 ```
 
 ```{r, echo=FALSE}
 hist(x, col = "green")
-hist(y, col="green")
+hist(xbar, col="green")
 ```
