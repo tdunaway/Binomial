@@ -1,7 +1,7 @@
 # Binomial Sampling
 Cody Frisby  
 October 6, 2015  
-Let's say the true proportion yield is 0.73. 
+Let's say the true proportion yield is 0.75. 
 What's the sampling distribution for a yield such as this?
 It will vary depending on the size of sample we take.
 Here I'm simulating a sample of size 20 from a very large population
@@ -15,7 +15,7 @@ mean(x)
 ```
 
 ```
-## [1] 0.75043
+## [1] 0.75054
 ```
 
 ```r
@@ -23,7 +23,7 @@ mean(xbar)
 ```
 
 ```
-## [1] 0.7474
+## [1] 0.7499
 ```
 
 ```r
@@ -32,7 +32,7 @@ quantile(xbar, c(0.025, 0.975))
 
 ```
 ##  2.5% 97.5% 
-##  0.55  0.90
+##  0.55  0.95
 ```
 
 Here's the distributions of the population and the means
@@ -48,7 +48,7 @@ mean(x)
 ```
 
 ```
-## [1] 0.74904
+## [1] 0.74884
 ```
 
 ```r
@@ -56,7 +56,7 @@ mean(xbar)
 ```
 
 ```
-## [1] 0.7578
+## [1] 0.7568
 ```
 
 ```r
@@ -65,7 +65,7 @@ quantile(xbar, c(0.025, 0.975))
 
 ```
 ##   2.5%  97.5% 
-## 0.6400 0.8505
+## 0.6295 0.8800
 ```
 
-![](Binomial_files/figure-html/unnamed-chunk-4-1.png) ![](Binomial_files/figure-html/unnamed-chunk-4-2.png) 
+![](Binomial_files/figure-html/unnamed-chunk-4-1.png) 

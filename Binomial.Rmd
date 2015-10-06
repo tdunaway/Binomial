@@ -6,7 +6,7 @@ output:
   html_document: 
     keep_md: yes
 ---
-Let's say the true proportion yield is 0.73. 
+Let's say the true proportion yield is 0.75. 
 What's the sampling distribution for a yield such as this?
 It will vary depending on the size of sample we take.
 Here I'm simulating a sample of size 20 from a very large population
@@ -37,6 +37,5 @@ quantile(xbar, c(0.025, 0.975))
 ```
 
 ```{r, echo=FALSE}
-hist(x, col = "green")
 hist(xbar, col="green")
 ```
