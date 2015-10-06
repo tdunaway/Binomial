@@ -20,6 +20,22 @@ mean(xbar)
 quantile(xbar, c(0.025, 0.975))
 ```
 
+Here's the distributions of the population and the means
+```{r, echo=FALSE}
+hist(x, col = "green")
+hist(xbar, col="green")
+```
+
+But, what if we change some of the inputs.  Say, the number of samples gets smaller but the size of the samples gets larger.
+```{r}
+x <- rbinom(100000,1,0.75)
+xbar <- NULL
+for (i in 1 : 100) xbar <- c(xbar, mean(sample(x,50)))
+mean(x)
+mean(xbar)
+quantile(xbar, c(0.025, 0.975))
+```
+
 ```{r, echo=FALSE}
 hist(x, col = "green")
 hist(xbar, col="green")

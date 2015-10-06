@@ -15,7 +15,7 @@ mean(x)
 ```
 
 ```
-## [1] 0.75186
+## [1] 0.75043
 ```
 
 ```r
@@ -23,7 +23,7 @@ mean(xbar)
 ```
 
 ```
-## [1] 0.7524
+## [1] 0.7474
 ```
 
 ```r
@@ -32,7 +32,40 @@ quantile(xbar, c(0.025, 0.975))
 
 ```
 ##  2.5% 97.5% 
-##  0.55  0.95
+##  0.55  0.90
 ```
 
+Here's the distributions of the population and the means
 ![](Binomial_files/figure-html/unnamed-chunk-2-1.png) ![](Binomial_files/figure-html/unnamed-chunk-2-2.png) 
+
+But, what if we change some of the inputs.  Say, the number of samples gets smaller but the size of the samples gets larger.
+
+```r
+x <- rbinom(100000,1,0.75)
+xbar <- NULL
+for (i in 1 : 100) xbar <- c(xbar, mean(sample(x,50)))
+mean(x)
+```
+
+```
+## [1] 0.74904
+```
+
+```r
+mean(xbar)
+```
+
+```
+## [1] 0.7578
+```
+
+```r
+quantile(xbar, c(0.025, 0.975))
+```
+
+```
+##   2.5%  97.5% 
+## 0.6400 0.8505
+```
+
+![](Binomial_files/figure-html/unnamed-chunk-4-1.png) ![](Binomial_files/figure-html/unnamed-chunk-4-2.png) 
